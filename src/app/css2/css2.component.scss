@@ -1,8 +1,11 @@
+// Always reading from TOP to BOTTOM
+
 // variables
 $color-title: blue;
-$color-title-alter-1: magenta;
+$color-title-less-500: magenta;
 
 $color-sub-title: red;
+$color-sub-title-landscape: green;
 
 
 // classes
@@ -17,12 +20,27 @@ $color-sub-title: red;
 }
 
 // Media queries
-@media all and (max-width: 500px) { //Applies from 0px to 500px
+//Applies from 0px to 500px
+// @media all and (max-width: 500px) { //Same as below
+@media (max-width: 500px) {
   .title {
-    color: $color-title-alter-1;
+    color: $color-title-less-500;
   }
 
   .sub-title {
     font-size: 10px;
   }
 }
+
+// @media (orientation: landscape) and (max-width:000px) {  // AND statement
+// @media (orientation: landscape), (max-width:000px) {     // OR  statement
+@media (orientation: landscape){
+  .sub-title {
+    color: $color-sub-title-landscape;
+  }
+}
+
+
+
+// Other media queries
+// @media print
