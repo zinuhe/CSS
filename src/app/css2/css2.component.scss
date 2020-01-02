@@ -1,0 +1,25 @@
+$color-title: blue;
+$color-title-alter-1: magenta;
+
+$color-sub-title: red;
+
+
+.title {
+  font-size: 20px;
+  color: $color-title;
+}
+
+.sub-title {
+  font-size: 16px;
+  color: $color-sub-title;
+}
+
+@media all and (max-width: 500px) {
+  .title {
+    color: $color-title-alter-1;
+  }
+
+  .sub-title {
+    font-size: 10px;
+  }
+}
