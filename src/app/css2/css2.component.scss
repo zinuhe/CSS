@@ -1,9 +1,11 @@
+// variables
 $color-title: blue;
 $color-title-alter-1: magenta;
 
 $color-sub-title: red;
 
 
+// classes
 .title {
   font-size: 20px;
   color: $color-title;
@@ -14,7 +16,8 @@ $color-sub-title: red;
   color: $color-sub-title;
 }
 
-@media all and (max-width: 500px) {
+// Media queries
+@media all and (max-width: 500px) { //Applies from 0px to 500px
   .title {
     color: $color-title-alter-1;
   }
