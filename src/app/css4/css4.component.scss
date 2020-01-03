@@ -1,0 +1,52 @@
+// Always reading from TOP to BOTTOM - mind SPECIFICITY
+
+// variables
+$color-black: black;
+$color-blue: blue;
+$color-magenta: magenta;
+$color-red: red;
+$color-green: green;
+
+
+// classes - pseudo - can NOT be used on inputs, only elements with content
+.text-1::before {
+  content: ''; // this is required to show something
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
+.text-1::after {
+  content: ''; // this is required to show something
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+}
+.text-1 {
+  color: black;
+  font-weight: bold;
+}
+
+.required::after {
+  content: '*';
+  // display: block;
+  color: red;
+
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: lightgray;
+  color: red;
+}

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { Css1Component } from './css1/css1.component';
 import { Css2Component } from './css2/css2.component';
 import { Css3Component } from './css3/css3.component';
+import { Css4Component } from './css4/css4.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Css1Component,
     Css2Component,
-    Css3Component
+    Css3Component,
+    Css4Component
   ],
   imports: [
     BrowserModule,
