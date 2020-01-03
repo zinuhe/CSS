@@ -10,19 +10,22 @@ $color-green: green;
 
 // classes
 
-
+// DIVs are by default display:block, it tooks ALL the HORIZONTAL space available,
+// unless it is defined width and height
 #div-1 {
-  display: block; //DIVs are by default display:block, it tooks ALL the space available
-  background-color: rgba($color: #FF0000, $alpha: 1.0)
+  display: block;
+  background-color: rgba($color: #FF0000, $alpha: 1.0);
+  //width: 100px;
+  height: 100px;
 }
 #div-2 {
-  background-color: rgba($color: #FF0000, $alpha: 0.5)
+  background-color: rgba($color: #FF0000, $alpha: 0.5);
 }
 #div-3 {
-  background-color: rgba($color: #FF0000, $alpha: 1.0)
+  background-color: rgba($color: #FF0000, $alpha: 1.0);
 }
 #div-4 {
-  background-color: rgba($color: #FF0000, $alpha: 0.5)
+  background-color: rgba($color: #FF0000, $alpha: 0.5);
 }
 
 #span-1 {
@@ -41,4 +44,33 @@ $color-green: green;
   display: inline-block;  //IMGs are by default display:inline-block, it tooks the minimun space available but you can set with and height
   width: 50px;
   height: 50px;
+}
+
+
+// FLEXBOX
+.container {
+  display: flex;
+  //width: 500px;
+  align-items: center;
+  background-color: burlywood;
+}
+
+.item {
+  width: 200px;
+  margin: 10px;
+  border: 2px solid #333;
+  background-color: #dfdfdf;
+}
+
+.item-1 {
+  min-height: 50px;
+}
+.item-2 {
+  min-height: 100px;
+}
+.item-3 {
+  min-height: 150px;
+}
+.item-4 {
+  min-height: 200px;
 }
