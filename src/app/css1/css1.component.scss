@@ -1,0 +1,26 @@
+// Always reading from TOP to BOTTOM - mind SPECIFICITY
+
+// variables
+$color-black: black;
+$color-blue: blue;
+$color-magenta: magenta;
+$color-red: red;
+$color-green: green;
+
+
+// classes
+.text-1 {
+  color: $color-green;
+}
+
+.text-2 {
+  font-size: 30px;
+}
+
+.text-3 {
+  font-style: italic;
+}
+
+.text-1.text-3 {
+  font-size: 40px;
+}

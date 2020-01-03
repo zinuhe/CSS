@@ -1,46 +1,55 @@
-// Always reading from TOP to BOTTOM
+// Always reading from TOP to BOTTOM - mind SPECIFICITY
 
 // variables
 $color-title: blue;
 $color-title-less-500: magenta;
 
-$color-sub-title: red;
-$color-sub-title-landscape: green;
+$color-red: red;
+$color-green: green;
 
 
 // classes
-.title {
-  font-size: 20px;
-  color: $color-title;
+.text-1 {
+  color: $color-green;
 }
 
-.sub-title {
-  font-size: 16px;
-  color: $color-sub-title;
+.text-1 {
+  color: $color-red;
 }
 
-// Media queries
-//Applies from 0px to 500px
-// @media all and (max-width: 500px) { //Same as below
-@media (max-width: 500px) {
-  .title {
-    color: $color-title-less-500;
-  }
+/*
+ * In this case TOP-TO-BOTTON does not apply because SPECIFICITY, specificity could be combined
+ * style, id, class, element
+ */
 
-  .sub-title {
-    font-size: 10px;
-  }
+// element + class  -- 0,0,1,1 -- higher specificity
+h1.h1-class-2 {
+  color: green;
 }
-
-// @media (orientation: landscape) and (max-width:000px) {  // AND statement
-// @media (orientation: landscape), (max-width:000px) {     // OR  statement
-@media (orientation: landscape){
-  .sub-title {
-    color: $color-sub-title-landscape;
-  }
+h1.h1-class-3 {
+  color: aqua;
 }
 
 
+// id -- 0,1,0,0
+#h1-id { // Avoid IDs as much as possible
+  color:magenta;
+}
 
-// Other media queries
-// @media print
+// class -- 0,0,1,0
+.h1-class-1 {
+  color:blue;
+}
+.h1-class-2 {
+  color:blue;
+}
+.h1-class-3 {
+  color:yellow !important; // OVERWRITE EVERYTHING, DO NOT USE !IMPORTANT
+  background-color: grey;
+}
+
+// element -- 0,0,0,1
+h1 {
+  color:red;
+}
+
