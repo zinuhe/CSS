@@ -1,0 +1,44 @@
+// Always reading from TOP to BOTTOM - mind SPECIFICITY
+
+// variables
+$color-black: black;
+$color-blue: blue;
+$color-magenta: magenta;
+$color-red: red;
+$color-green: green;
+
+
+// classes
+
+
+#div-1 {
+  display: block; //DIVs are by default display:block, it tooks ALL the space available
+  background-color: rgba($color: #FF0000, $alpha: 1.0)
+}
+#div-2 {
+  background-color: rgba($color: #FF0000, $alpha: 0.5)
+}
+#div-3 {
+  background-color: rgba($color: #FF0000, $alpha: 1.0)
+}
+#div-4 {
+  background-color: rgba($color: #FF0000, $alpha: 0.5)
+}
+
+#span-1 {
+  // display: none; //Complety desapear from HTML
+  display: inline;  //SPANs are by default display:inline, it tooks the minimun space available
+  background-color: blue;
+  // display:inline elements does not allow width, height
+  // width: 100px;
+  // height: 100px;
+}
+#span-2 {
+  background-color: blue;
+}
+
+#img-1 {
+  display: inline-block;  //IMGs are by default display:inline-block, it tooks the minimun space available but you can set with and height
+  width: 50px;
+  height: 50px;
+}

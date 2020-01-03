@@ -7,6 +7,7 @@ import { Css1Component } from './css1/css1.component';
 import { Css2Component } from './css2/css2.component';
 import { Css3Component } from './css3/css3.component';
 import { Css4Component } from './css4/css4.component';
+import { Css5Component } from './css5/css5.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Css4Component } from './css4/css4.component';
     Css1Component,
     Css2Component,
     Css3Component,
-    Css4Component
+    Css4Component,
+    Css5Component
   ],
   imports: [
     BrowserModule,
